@@ -8,11 +8,26 @@
         //- acima de 1500: aumento de 5 %
     
     //Entrada
+const preço=Number(prompt("Informe o preço:"))
+
 
 
     //Processamento
 
-    
-    //Saída
+    let porcentual
+    (preço <= 280) ? porcentual = 20
+
+    :(preço <= 700) ? porcentual = 15
+
+    :(preço <= 1500) ? porcentual = 10
+
+    :porcentual = 5;
+
+    const valorAumento = preço * (porcentual / 100);
+    const valorFinal = preço + valorAumento;
+
+     //Saída
+document.write(`O preço fica em ${valorFinal}`)
+
 
 </script>

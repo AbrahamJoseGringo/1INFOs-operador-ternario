@@ -10,11 +10,17 @@
     // Entre 5.9 e zero            E
 
     //Entrada
-
-
+const nota =Number(prompt("Informe a Nota (em numeros):"))
+let resposta;
     //Processamento
 
+    (nota >= 9.0) ? resposta = "A nota é A"
+    :(nota >= 8.0) ? resposta ="A nota é B"
+    :(nota >= 7.0) ? resposta = "A nota é C"
+    :(nota >= 6.0) ? resposta = "A nota é D"
+    :resposta = "A nota é de E"
     
     //Saída
+    document.write(`${resposta}`)
 
 </script>

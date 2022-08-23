@@ -10,11 +10,21 @@
     // Verifique se o usuário ganha mais do que recebe e apresente em tela, indicando quanto que sobrou após o pagamento das contas ou quanto que faltou para poder pagar todas as contas previstas.
 
     //Entrada
-
-
+const salario =Number(prompt("Informe seu salario:"))
+const agua = Number(prompt("Informe sua conta de agua:"))
+const energia = Number(prompt("informe sua conta de Energia:"))
+const telefone = Number(prompt("Informe sua conta de Telefone:"))
+const Supermercado = Number(prompt("Informe quanto gasta no supermecado:"))
+let resposta;
     //Processamento
+    const totaldeContas = agua + energia + telefone + Supermercado;
+    const sobrou = salario - totaldeContas;
+    const deuda = totaldeContas - salario;
 
+    (totaldeContas > salario) ? resposta =document.write(`Não foi possivel pagar, lhe falta:R$${deuda.toFixed(2)}`)
+    :resposta =document.write(`Sobrou:R$${sobrou.toFixed(2)}`)
     
     //Saída
+    
     
 </script>

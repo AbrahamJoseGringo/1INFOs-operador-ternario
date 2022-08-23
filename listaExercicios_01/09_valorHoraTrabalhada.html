@@ -8,11 +8,22 @@
     // Apresente o salário final recebido pelo funcionário semanalmente e o preço de cada hora trabalhada.
 
     //Entrada
+    const horas =Number(prompt("Informe as horas trabalhadas:"))
+    const salario =Number(prompt("Informe o seu salario:"))
+    
 
 
     //Processamento
+    let porcentual;
+    (horas <= 45) ? porcentual = 0
+    :(horas <= 60) ? porcentual = 20
+    :porcentual = 30;
 
+    const valorAumento = salario * (porcentual / 100);
+    const valorFinal = salario + valorAumento;
     
     //Saída
+   (porcentual === 0) ? document.write("Não há aumento!")
+    :document.write(`Seu salario ficaria em R$${valorFinal.toFixed(2)}`)
 
 </script>

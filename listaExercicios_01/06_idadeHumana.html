@@ -9,10 +9,23 @@
 
     //Entrada
 
+    const idadeCao = parseInt(prompt("Informe a idade do seu cão:"));
+    const porteCao = prompt("Qual o porte do seu cão? (P-Pequeno | M-Médio | G-Grande)").toUpperCase();
+    let fator;
+
 
     //Processamento
 
     
+     (porteCao === "P") ? fator = 5
+    :(porteCao === "M")? fator = 6
+    :(porteCao === "G") ? fator = 7
+     :fator = 0
+
+     const idadeFinal = idadeCao * fator;
     //Saída
+
+ (idadeFinal === 0)? document.write("Porte do Animal Incorreto!")
+   :document.write(`A idade atual do seu cão é de ${idadeFinal} anos!`)
 
 </script>
