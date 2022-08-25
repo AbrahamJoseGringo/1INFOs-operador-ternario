@@ -4,12 +4,14 @@
     //Construa um programa que leia um caractere e informe se este caractere é uma vogal.
 
     //Entrada
-var letraonumer =prompt("Informe seu digito:")
+const letraonumer =prompt("Informe seu digito:").toLocaleLowerCase();
 let respuesta;
     //Processamento
 
-    (letraonumer == "@A") ? respuesta =document.write("É uma letra")
-    : respuesta =document.write("é um numero")
+    (letraonumer === "a" || letraonumer === "e" || letraonumer === "i" || letraonumer === "o" || letraonumer === "u") ? 
+    respuesta =`A letra ${letraonumer} É uma VOCAL!`
+    : respuesta =`A letra ${letraonumer} É um NUMERO!`;
     //Saída
+    document.write(respuesta);
 
 </script>
